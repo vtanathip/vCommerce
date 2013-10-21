@@ -66,7 +66,7 @@ module.exports = function(config) {
     },
     //coverage report
     coverageReporter: {
-        type : 'html',
+        type : 'cobertura',
         dir : 'coverage/'
     }
 
