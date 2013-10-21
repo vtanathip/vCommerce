@@ -15,7 +15,9 @@ module.exports = function(config) {
       'app/bower_components/angular-resource/angular-resource.min.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-sanitize/angular-sanitize.min.js',
+      'app/bower_components/angular-localstorage/angular-local-storage.js',
       'app/bower_components/angular-cookies/angular-cookies.min.js',
+      'app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
@@ -32,6 +34,8 @@ module.exports = function(config) {
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
 
+    //color
+    colors: true,
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
@@ -45,11 +49,26 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+
+
+    // test results reporter to use
+    // possible values: dots || progress || growl
+    reporters: ['coverage','progress'],
+    //add report coverage
+    preprocessors: {
+        'app/scripts/**/*.js': 'coverage'
+    },
+    //coverage report
+    coverageReporter: {
+        type : 'html',
+        dir : 'coverage/'
+    }
+
   });
 };

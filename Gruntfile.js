@@ -100,7 +100,7 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: ['.tmp','coverage']
     },
     jshint: {
       options: {
@@ -346,7 +346,8 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma:unit',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [
