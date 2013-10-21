@@ -1,17 +1,20 @@
 'use strict';
 
 angular.module('vCommerceApp', [
+  'LocalStorageModule',
   'ngCookies',
   'ngResource',
-  'ngSanitize'
+  'ngSanitize',
+  'ui.router'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider.state('main', {
+        url: "/",
+        templateUrl : 'views/main.html',
+        controller  : 'MainCtrl'
+    });
+    
   });
