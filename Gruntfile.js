@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     },
     watch: {
       coffee: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+        files: ['<%= yeoman.app %>/coffee/{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
       coffeeTest: {
@@ -113,15 +113,16 @@ module.exports = function (grunt) {
     },
     coffee: {
       options: {
-        sourceMap: true,
-        sourceRoot: ''
+        sourceMap: false,
+        sourceRoot: '',
+        bare: true
       },
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
+          cwd: '<%= yeoman.app %>/coffee',
           src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
+          dest: '<%= yeoman.app %>/scripts',
           ext: '.js'
         }]
       },
