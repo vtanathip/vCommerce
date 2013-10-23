@@ -3,30 +3,63 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import "bootstrap-sass/lib/bootstrap";
 
-/* Put your CSS here */
-html, body {
-  margin: 20px;
-}
-
+/* vCommerce css start here */
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: arial, sans-serif;
+    color: #767676;
+    background: #f5f5f5 url(../images/body.jpg) repeat-x center 0;
+    min-width: 994px;
 }
+#wrapper { 
+    min-height: 100%; 
+    height: auto !important; 
+    height: 100%; 
+    margin: 0 auto -61px; 
+    background: url(../images/wrapper.png) repeat-x 0 152px; 
+} 
+#wrapper-bottom { 
+    background: url(../images/wrapper-bottom.png) repeat-x 0 bottom; 
+}
+.shell { 
+    width: 992px; 
+    margin: 0 auto; 
+}
+#header { position: relative; z-index: 5; padding: 7px 0 8px; }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
+#logo { display: inline; float: left; padding: 7px 0 0 34px; font-size: 0; line-height: 0; width: 239px; }
+#logo a { display: block; width: 239px; height: 45px; background: url(../images/logo.png) no-repeat 0 0; text-indent: -4000px; }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
+#search { position: absolute; display: none; top: 1px; right: 6px; padding-right: 3px; width: 210px; background: url(../images/search.png) no-repeat 0 0; }
+#search .field { display: inline; float: left; padding: 5px 15px 4px; width: 99px; background: none; border: 0; }
+#search .submit-button { display: inline; float: right; padding: 2px 0 8px; width: 38px; border: 0; background: 0; cursor: pointer; }
+#search .retract-button { font-size: 0; line-height: 0; text-indent: -4000px; display: block; float: left; padding-left: 20px; width: 15px; height: 30px; background: url(images/retract-button.png) no-repeat 50% 50%; cursor: pointer; }
+
+.search-expand { position: absolute; top: 1px; right: 5px; width: 58px; height: 30px; cursor: pointer; background: url(../images/search-expand.png) no-repeat 0 0;  }
+
+.shopping-cart { text-align: right; padding-right: 77px; color: #8be3fe; font-family: 'Trebuchet MS', arial, helvetica, sans-serif; font-weight: bold; }
+.shopping-cart span { padding-left: 17px; color: #0a70b0; font-weight: normal; }
+.shopping-cart a { color: #8be3fe; padding-left: 17px; }
+.shopping-cart a.cart { background: url(../images/cart.png) no-repeat 0 50%; padding-left: 29px; }
+
+span.label-left { display: block; float: left; width: 21px; height: 42px; background: url(../images/label-left.png) no-repeat 0 0; }
+span.label-right { display: block; float: left; width: 32px; height: 42px; background: url(../images/label-right.png) no-repeat 0 0; }
+.label-bg { display: inline; float: left; height: 42px; background: url(../images/label-bg.png) repeat-x 0 0; }
+.label { position: absolute; top: -15px; left: -7px; height: 42px; width: 203px; background: url(../images/label.png) no-repeat 0 0; }
+.label h3 { padding-left: 15px; display: inline; float: left; font-family: Arial, helvetica, sans-serif; font-size: 18px; color: #fff; font-weight: normal; line-height: 30px;  }
+
+#navigation { display: inline; float: right; padding: 10px 32px 0 0; }
+#navigation ul li { list-style: none; display: inline; float: left; font-weight: bold; line-height: 14px; padding-left: 30px; }
+#navigation ul li a { color: #fff; }
+#navigation ul li a:hover { color: #005388; text-decoration: none; }
+
+#sort-nav { display: inline; position: absolute; top: 73px; left: 0; height: 42px; z-index: 50; }
+#sort-nav ul { display: inline; float: left; padding-left: 13px; list-style: none; height: 42px; }
+#sort-nav ul li { position: relative; display: inline; float: left; line-height: 32px; padding-right: 44px; }
+#sort-nav ul li.last { padding-right: 19px; }
+#sort-nav ul li a { position: relative; padding-right: 12px; font-weight: bold; color: #fff; background: url(../images/nav-item.png) no-repeat right 50%;  }
+#sort-nav .dd { display: none; position: absolute; z-index: 100; top: 30px; left: 0; width: 109px; background: #3a8cc0; }
+#sort-nav .dd ul { float: none; }
+#sort-nav .dd ul li { float: left;  background: none; padding: 0; width: 109px; }
+#sort-nav .dd ul li a { display: block; padding: 0 0 0 15px; line-height: 25px; width: 95px; background: none; }
