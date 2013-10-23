@@ -77,7 +77,7 @@
 	<div class="slider-holder">
 		<div class="promo">
 			<img src="../images/promo.jpg" alt="Big Sale This Week -30% OFF!" />
-		</div>						
+		</div>	
 		<div id="slider">
 			<ul>
 				<li>
@@ -160,7 +160,7 @@
 			<a title="Slide 2" href="#">2</a>
 			<a title="Slide 3" href="#">3</a>
 			<a title="Slide 4" href="#">4</a>
-			<a title="Slide 5" href="#">5</a>																													 
+			<a title="Slide 5" href="#">5</a>									 
 		</div>						
 	</div>	
 	<!-- END Slider -->
@@ -494,3 +494,37 @@
 	<!-- END Content -->
 </div>
 <!-- END Main -->
+
+<script type="text/javascript">
+        
+  $("#slider").jcarousel({
+      scroll: 1,
+      auto: 2,
+      wrap: 'both',
+      initCallback: mycarousel_initCallback,
+      // This tells jCarousel NOT to autobuild prev/next buttons
+      buttonNextHTML: null,
+      buttonPrevHTML: null,
+      itemVisibleInCallback: {
+          onAfterAnimation: function(c, o, i, s) {
+              $('.jcarousel-control a').removeClass('active');
+              $('.jcarousel-control a:eq('+ (i-1) +')').addClass('active');
+          }
+      }
+  });
+
+  var width =  24 * $('.jcarousel-control a').length;    
+    $('.jcarousel-control').width(width+24);
+    var left_pos = ((994 - width)/2 ) + 1;
+    $('.jcarousel-control').css('left' , left_pos );   
+
+  function mycarousel_initCallback(carousel) {
+    jQuery('.jcarousel-control a').bind('click', function() {
+        $('.jcarousel-control a').removeClass('active');
+        $(this).addClass('active');
+        carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+        return false;
+    });
+  };  
+  
+</script>
