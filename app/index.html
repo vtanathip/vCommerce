@@ -3,16 +3,16 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>vCommerce.com: Online shopping for Office Accessories</title>
+    <meta name="description" content="ecommerce online shopping">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/main.css?v=0.1">
         <!-- endbuild -->
 </head>
   <body ng-app="vCommerceApp">
@@ -26,7 +26,27 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div id="wrapper" ui-view=""></div>
+    <div id="wrapper">
+      <div id="wrapper-bottom">
+          <div class="shell" ui-view=""></div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="shell">
+        <a class="footer-logo" href="http://css-free-templates.com/" title="Home">
+          <img src="../images/logo-footer.png" alt="Logo" />
+        </a>
+        <p id="bottom-nav">
+          <a title="Home" href="#">Home</a>
+          <a title="Sales" href="#">Sales</a><a title="Catalog" href="#">Catalog</a>
+          <a title="Blog" href="#">Blog</a><a title="About Us" href="#">About Us</a>
+          <a title="Powered by vtanathip" href="http://www.martroutine.com/">Powered by vtanathip</a>
+        </p>
+        <div class="cl"></div>
+      </div>
+    </footer>
+    <!-- END Footer -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <!-- <script>
