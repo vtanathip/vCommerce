@@ -3,7 +3,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import "bootstrap-sass/lib/bootstrap";
 
-/* vCommerce css start here */
+/* vCommerce css code start here */
 body {
     font-size: 12px;
     line-height: 16px;
@@ -26,6 +26,7 @@ body {
     width: 992px; 
     margin: 0 auto; 
 }
+
 #header { position: relative; z-index: 5; padding: 7px 0 8px; }
 
 #logo { display: inline; float: left; padding: 7px 0 0 34px; font-size: 0; line-height: 0; width: 239px; }
@@ -63,3 +64,34 @@ span.label-right { display: block; float: left; width: 32px; height: 42px; backg
 #sort-nav .dd ul { float: none; }
 #sort-nav .dd ul li { float: left;  background: none; padding: 0; width: 109px; }
 #sort-nav .dd ul li a { display: block; padding: 0 0 0 15px; line-height: 25px; width: 95px; background: none; }
+
+#main 
+{
+    position: relative;
+    z-index: 1
+}
+#footer-push {
+    height: 61px;
+}
+#footer{
+    padding-top: 9px;
+    height: 52px;
+    background: url(../images/footer.jpg) repeat-x center 0;
+}
+#footer a.footer-logo {
+    display: block;
+    float: right;
+    padding-right: 5px;
+    width: 186px;
+    height: 35px;
+}
+#bottom-nav 
+{
+    line-height: 14px;
+    padding: 7px 0 0 7px;
+}
+#bottom-nav a 
+{
+    color: #83c0de;
+    padding-right: 30px;
+}
