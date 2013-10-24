@@ -13,6 +13,7 @@
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css?v=0.1">
+        <link rel="stylesheet" href="styles/3party/jquery.jscrollpane.css?v=0.1">
         <!-- endbuild -->
 </head>
   <body ng-app="vCommerceApp">
@@ -80,6 +81,8 @@
         <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
         <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
         <script src="scripts/3party/jquery.jcarousel.js"></script>
+        <script src="scripts/3party/jquery.mousewheel.js"></script>
+        <script src="scripts/3party/jquery.jscrollpane.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/modules.js -->
@@ -93,7 +96,9 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/directives/sliderdirective.js"></script>
+        <script src="scripts/directives/slider.js"></script>
+        <script src="scripts/directives/featureproducts.js"></script>
+        <script src="scripts/directives/bestseller.js"></script>
         <!-- endbuild -->
 
 </body>
