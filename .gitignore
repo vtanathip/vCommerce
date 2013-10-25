@@ -4,3 +4,10 @@ dist
 .sass-cache
 app/bower_components
 coverage
+app/scripts/controllers
+app/scripts/services
+app/scripts/directives
+app/styles/main.css
+test/e2e
+test/spec
+test/mock
