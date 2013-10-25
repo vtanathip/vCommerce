@@ -11,10 +11,21 @@ angular.module('vCommerceApp', [
     
     $urlRouterProvider.otherwise("/");
 
+    var MainCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('main');
+        }
+    };
+
     $stateProvider.state('main', {
         url: "/",
         templateUrl : 'views/main.html',
-        controller  : 'MainCtrl'
+        controller  : 'MainCtrl',
+        resolve     : MainCtrlResolver
     });
     
   });
+
+angular.module('vCommerceApp').run(function($rootScope) {
+    $rootScope.lang = 'en';
+});
