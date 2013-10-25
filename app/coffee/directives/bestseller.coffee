@@ -4,9 +4,8 @@ angular.module('vCommerceApp')
 	.directive 'bestSeller', ->
 		directiveDefinitionObject =
 			restrict : 'E',
-			scope : {
-	            data      : '='
-	        },
+			scope : 
+	            data      : '=',
 	        templateUrl : 'templates/bestseller.html',
 	        replace: false,
 	        compile: ($scope) ->

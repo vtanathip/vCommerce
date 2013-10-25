@@ -4,9 +4,8 @@ angular.module('vCommerceApp')
 	.directive 'featureProducts', ->
 		directiveDefinitionObject =
 			restrict : 'E',
-			scope : {
-	            data      : '='
-	        },
+			scope : 
+	            data      : '=',
 	        templateUrl : 'templates/featureproducts.html',
 	        replace: false
 

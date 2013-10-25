@@ -4,9 +4,8 @@ angular.module('vCommerceApp')
 	.directive 'slider', ->
 		directiveDefinitionObject =
 			restrict : 'E',
-			scope : {
-	            data      : '='
-	        },
+			scope : 
+	            data      : '=',
 	        templateUrl : 'templates/slider.html',
 	        replace: false,
 	        transclude : true,
