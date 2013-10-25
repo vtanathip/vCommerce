@@ -9,15 +9,19 @@ angular.module('vCommerceApp')
 	        },
 	        templateUrl : 'templates/bestseller.html',
 	        replace: false,
-	        controller: ($scope) ->
-
+	        compile: ($scope) ->
+	        
 	        	scrollconfig =
 	        		showArrows: true,
 			        horizontalDragMinWidth: 28,
 			        horizontalDragMaxWidth: 28 
 
 	        	$('.scroll-pane').jScrollPane(scrollconfig)
-	        	
+
+	        	return
+
+	        controller: ($scope) ->
+
 	        	return
 
 		return directiveDefinitionObject
