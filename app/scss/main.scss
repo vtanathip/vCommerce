@@ -34,7 +34,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
     a:hover 
 {
      text-decoration: underline;
-     
+     cursor: pointer;
 }
     a img 
 {
@@ -50,16 +50,6 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
     textarea 
 {
      overflow: auto;
-     
-}
-.cl 
-{
-     display: block;
-     height: 0;
-     font-size: 0;
-     line-height: 0;
-     text-indent: -4000px;
-     clear: both;
      
 }
 
@@ -521,10 +511,9 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 .signup-holder{
      position:relative;
-     padding-bottom: 24px;
      margin-bottom: 30px;
      width: 981px;
-     height: 550px;
+     height: 535px;
      background: url(../images/products-holder.png) no-repeat 0 bottom;
 }
     .signup-holder h3
@@ -540,10 +529,16 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
     }
     .signup-holder .middle 
     {
-         padding: 12px 5px 10px 20px;
-         height: 500px;
+         padding: 12px 5px 10px 5px;
          background: url(../images/products-middle.png) repeat-y center 0;
     }
+        .signup-holder .middle .wrapper-content{
+            width: 960px;
+            margin: 30px auto;
+        }
+        .signup-holder .middle .content{
+            width: 470px;
+        }
     .signup-holder .bottom 
     {
          height: 7px;
@@ -818,6 +813,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      width: 257px;
      
 }
+#newsletter .submit-button input{
+    font-weight: bold;
+    color: #fff; 
+}
     #newsletter .submit-button 
 {
      display: block;
@@ -836,36 +835,6 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      background: none;
      border: none;
      cursor: pointer;
-     
-}
-    #newsletter .submit-button input 
-{
-     font-weight: bold;
-     color: #fff;
-     
-}
-    #newsletter .field-holder 
-{
-     margin-bottom: 6px;
-     padding: 0 14px;
-     width: 229px;
-     background: url(../images/field.png) no-repeat 0 0;
-     
-}
-    #newsletter .field-holder input 
-{
-     border: none;
-     background: none;
-     padding: 6px 0 8px;
-     width: 229px;
-     
-}
-    #newsletter .field-holder input 
-{
-     font-size: 15px;
-     font-weight: bold;
-     line-height: 17px;
-     color: #1fb0e2;
      
 }
 .post-short .date-box 
@@ -937,3 +906,59 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      padding-right: 30px;
      
 }
+
+/* Tools */
+.floatLeft{
+    float: left;
+    margin-left: 10px;
+}
+    .floatLeft label{
+        color: rgb(64, 92, 96);
+        font-size: 15px;
+        font-weight: bold;
+        margin: 15px;
+        display: block;
+    }
+.floatRight{
+    float:right;
+}
+.cl{
+    display: block;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -4000px;
+    clear: both;
+}
+.field-holder{
+    margin-bottom: 6px;
+    padding: 0 14px;
+    width: 229px;
+    background: url(../images/field.png) no-repeat 0 0;
+}
+.field-holder input{
+    border: none;
+    background: none;
+    padding: 6px 0 8px;
+    width: 229px;
+}
+.field-holder input {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #1fb0e2;
+}
+.confirmbutton{
+    background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;
+    &:hover{ background-color: #2a78f6; }
+}
+.cancelbutton{
+    background: #ba6221; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;
+    &:hover{ background-color: #8f4b19; }
+}
+.wrapperbutton{
+    width: 250px;
+    margin: 50px auto 0px auto;
+    height: auto;
+}
+/* END Tools*/
