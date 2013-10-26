@@ -22,6 +22,11 @@ angular.module('vCommerceApp', [
         templateUrl : 'views/main.html',
         controller  : 'MainCtrl',
         resolve     : MainCtrlResolver
+    }).
+    state('signup',{
+        url: "/signup",
+        templateUrl : 'views/signup.html',
+        controller  : 'SignUpCtrl',
     });
     
   });
