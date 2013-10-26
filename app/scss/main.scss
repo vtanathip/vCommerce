@@ -62,26 +62,30 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      clear: both;
      
 }
-    #wrapper 
+
+/* START Layout */
+#wrapper 
 {
-     min-height: 100%;
+     
      height: auto !important;
-     height: 100%;
      margin: 0 auto -61px;
      background: url(../images/wrapper.png) repeat-x 0 152px;
      
 }
      #wrapper-bottom 
 {
-     background: url(../images/wrapper-bottom.png) repeat-x 0 bottom;
+    height: 100% !important;
+    background: url(../images/wrapper-bottom.png) repeat-x 0 bottom;
      
 }
 .shell 
 {
      width: 992px;
      margin: 0 auto;
-     
+     margin-bottom: 65px;
 }
+/* END Layout */
+
     #header 
 {
      position: relative;
@@ -276,8 +280,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      top: 73px;
      left: 0;
      height: 42px;
-     z-index: 50;
-     
+     z-index: 50; 
 }
     #sort-nav ul 
 {
@@ -510,6 +513,50 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      padding: 46px 5px 14px;
      
 }
+/* sign up */
+#signup{
+    position: relative;
+    z-index: 1;
+    min-height: 750px;
+}
+.signup-holder{
+     position:relative;
+     padding-bottom: 24px;
+     margin-bottom: 30px;
+     width: 981px;
+     height: 550px;
+     background: url(../images/products-holder.png) no-repeat 0 bottom;
+}
+    .signup-holder h3
+    {
+        min-width: 134px;
+    }
+    .signup-holder .top 
+    {
+         height: 8px;
+         line-height: 0;
+         font-size: 0;
+         background: url(../images/products-top.png) no-repeat 0 0;
+    }
+    .signup-holder .middle 
+    {
+         padding: 12px 5px 10px 20px;
+         height: 500px;
+         background: url(../images/products-middle.png) repeat-y center 0;
+    }
+    .signup-holder .bottom 
+    {
+         height: 7px;
+         line-height: 0;
+         font-size: 0;
+         background: url(../images/products-bottom.png) no-repeat 0 bottom;
+    }
+    .signup-holder .best-sellers 
+    {
+         padding-bottom: 5px;
+         background: url(../images/best-sellers.png) repeat-y center 0;
+    }
+
 .products-holder 
 {
      position:relative;
@@ -867,7 +914,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      padding-top: 9px;
      height: 52px;
      background: url(../images/footer.jpg) repeat-x center 0;
-     
+
 }
      #footer a.footer-logo 
 {
