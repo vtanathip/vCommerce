@@ -26,7 +26,12 @@ angular.module('vCommerceApp', [
     state('signup',{
         url: "/signup",
         templateUrl : 'views/signup.html',
-        controller  : 'SignUpCtrl',
+        controller  : 'SignUpCtrl'
+    }).
+    state('catalog',{
+      url: "/catalog",
+      templateUrl : 'views/catalog.html',
+      controller  : 'CatalogCtrl'
     });
     
   });
