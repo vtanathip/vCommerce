@@ -32,6 +32,11 @@ angular.module('vCommerceApp', [
       url: "/catalog",
       templateUrl : 'views/catalog.html',
       controller  : 'CatalogCtrl'
+    }).
+    state('product',{
+      url: "/product",
+      templateUrl : 'views/product.html',
+      controller  : 'ProductCtrl'
     });
     
   });
