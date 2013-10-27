@@ -3,4 +3,4 @@
 angular.module('vCommerceApp')
 	.controller 'CheckOutCtrl', ($scope) ->
 
-	return
+		return
