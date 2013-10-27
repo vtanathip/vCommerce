@@ -13,4 +13,8 @@ angular.module('vCommerceApp')
 	    	$state.go state
 	    	return
 
+	    $scope.viewShoppingCart = ()->
+	    	$state.go 'shoppingcart'
+	    	return
+
 	    return
