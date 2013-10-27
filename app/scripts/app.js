@@ -43,8 +43,8 @@ angular.module('vCommerceApp', [
       templateUrl: 'views/shoppingcart.html',
       controller: 'ShoppingCartCtrl'
     }).
-    state('shoppingcart.checkout',{
-      url: '/shoppingcart/checkout',
+    state('checkout',{
+      url: '/checkout',
       templateUrl: 'views/checkout.html',
       controller: 'CheckOutCtrl'
     });
