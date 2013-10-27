@@ -2,6 +2,8 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 /* vCommerce css code start here */
+$white: #fff;
+
 * 
 {
      margin: 0;
@@ -24,86 +26,71 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
         min-width: 994px;
 
 }
-    a 
-{
+
+a{
      color: #0252aa;
      text-decoration: none;
      cursor: pointer;
-     
+     &:hover{
+        text-decoration: underline;
+     }
+     img{
+        border: 0;
+     }
 }
-    a:hover 
-{
-     text-decoration: underline;
-     cursor: pointer;
-}
-    a img 
-{
-     border: 0;
-     
-}
-    input, textarea, select 
-{
+
+input, select{
      font-size: 12px;
-     font-family: arial, sans-serif;
-     
+     font-family: arial, sans-serif;  
 }
-    textarea 
-{
-     overflow: auto;
-     
+
+textarea {
+    @extend input;
+    overflow: auto;
 }
 
 /* START Layout */
-#wrapper 
-{
-     
+#wrapper{
      height: auto !important;
      margin: 0 auto -61px;
      background: url(../images/wrapper.png) repeat-x 0 152px;
-     
 }
-     #wrapper-bottom 
-{
+
+#wrapper-bottom{
     height: 100% !important;
     background: url(../images/wrapper-bottom.png) repeat-x 0 bottom;
-     
 }
-.shell 
-{
+
+.shell{
      width: 992px;
      margin: 0 auto;
      margin-bottom: 65px;
 }
 /* END Layout */
 
-    #header 
-{
+#header{
      position: relative;
      z-index: 5;
      padding: 7px 0 8px;
-     
 }
-    #logo 
-{
+
+#logo{
      display: inline;
      float: left;
      padding: 7px 0 0 34px;
      font-size: 0;
      line-height: 0;
      width: 239px;
-     
+     a{
+        display: block;
+        width: 239px;
+        height: 45px;
+        background: url(../images/logo.png) no-repeat 0 0;
+        text-indent: -4000px;
+     }
 }
-    #logo a 
-{
-     display: block;
-     width: 239px;
-     height: 45px;
-     background: url(../images/logo.png) no-repeat 0 0;
-     text-indent: -4000px;
-     
-}
-    #search 
-{
+
+#search{
      position: absolute;
      display: none;
      top: 1px;
@@ -111,45 +98,38 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      padding-right: 3px;
      width: 210px;
      background: url(../images/search.png) no-repeat 0 0;
-     
+     .field{
+        display: inline;
+        float: left;
+        padding: 5px 15px 4px;
+        width: 99px;
+        background: none;
+        border: 0;
+     }
+    .submit-button{
+        display: inline;
+        float: right;
+        padding: 2px 0 8px;
+        width: 38px;
+        border: 0;
+        background: 0;
+        cursor: pointer;
+    }
+    .retract-button{
+        font-size: 0;
+        line-height: 0;
+        text-indent: -4000px;
+        display: block;
+        float: left;
+        padding-left: 20px;
+        width: 15px;
+        height: 30px;
+        background: url(../images/retract-button.png) no-repeat 50% 50%;
+        cursor: pointer;
+    }
 }
-    #search .field 
-{
-     display: inline;
-     float: left;
-     padding: 5px 15px 4px;
-     width: 99px;
-     background: none;
-     border: 0;
-     
-}
-    #search .submit-button 
-{
-     display: inline;
-     float: right;
-     padding: 2px 0 8px;
-     width: 38px;
-     border: 0;
-     background: 0;
-     cursor: pointer;
-     
-}
-    #search .retract-button 
-{
-     font-size: 0;
-     line-height: 0;
-     text-indent: -4000px;
-     display: block;
-     float: left;
-     padding-left: 20px;
-     width: 15px;
-     height: 30px;
-     background: url(../images/retract-button.png) no-repeat 50% 50%;
-     cursor: pointer;
-     
-}
-.search-expand 
-{
+
+.search-expand{
      position: absolute;
      top: 1px;
      right: 5px;
@@ -157,215 +137,176 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
      height: 30px;
      cursor: pointer;
      background: url(../images/search-expand.png) no-repeat 0 0;
-      
 }
-.shopping-cart 
-{
+
+.shopping-cart{
      text-align: right;
      padding-right: 77px;
      color: #8be3fe;
      font-family: 'Trebuchet MS', arial, helvetica, sans-serif;
      font-weight: bold;
-     
+    span{
+        padding-left: 17px;
+        color: #0a70b0;
+        font-weight: normal;
+    }
+    a{
+        color: #8be3fe;
+        padding-left: 17px;
+    }
+    a.cart{
+        background: url(../images/cart.png) no-repeat 0 50%;
+        padding-left: 29px;
+    }
 }
-.shopping-cart span 
-{
-     padding-left: 17px;
-     color: #0a70b0;
-     font-weight: normal;
-     
-}
-.shopping-cart a 
-{
-     color: #8be3fe;
-     padding-left: 17px;
-     
-}
-.shopping-cart a.cart 
-{
-     background: url(../images/cart.png) no-repeat 0 50%;
-     padding-left: 29px;
-     
-}
-    span.label-left 
-{
+
+span.label-left{
      display: block;
      float: left;
      width: 21px;
      height: 42px;
      background: url(../images/label-left.png) no-repeat 0 0;
-     
 }
-    span.label-right 
-{
+
+span.label-right{
      display: block;
      float: left;
      width: 32px;
      height: 42px;
      background: url(../images/label-right.png) no-repeat 0 0;
-     
 }
-.label-bg 
-{
+
+.label-bg{
      display: inline;
      float: left;
      height: 42px;
      background: url(../images/label-bg.png) repeat-x 0 0;
-     
 }
-.label 
-{
+
+.label{
      position: absolute;
      top: -15px;
      left: -7px;
      height: 42px;
      width: 203px;
      background: url(../images/label.png) no-repeat 0 0;
-     
+     h3{
+        padding-left: 15px;
+        display: inline;
+        float: left;
+        font-family: Arial, helvetica, sans-serif;
+        font-size: 18px;
+        color: $white;
+        font-weight: normal;
+        line-height: 30px;
+    }
 }
-.label h3 
-{
-     padding-left: 15px;
-     display: inline;
-     float: left;
-     font-family: Arial, helvetica, sans-serif;
-     font-size: 18px;
-     color: #fff;
-     font-weight: normal;
-     line-height: 30px;
-      
-}
-    #navigation 
-{
+
+#navigation{
      display: inline;
      float: right;
      padding: 10px 32px 0 0;
-     
-}
-    #navigation ul li 
-{
-     list-style: none;
-     display: inline;
-     float: left;
+    ul li{
+        list-style: none;
+        display: inline;
+        float: left;
         font-weight: bold;
-     line-height: 14px;
-     padding-left: 30px;
+        line-height: 14px;
+        padding-left: 30px;
+    }
+    ul li a{
+        color: $white;
+    }
+    ul li a:hover{
+        color: #005388;
+        text-decoration: none;
+    }
+}
+
+#sort-nav{
+    display: inline;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    height: 42px;
+    z-index: 50;
+    ul{
+        display: inline;
+        float: left;
+        list-style: none;
+        height: 42px;
+    }
+    ul li{
+        position: relative;
+        display: inline;
+        float: left;
+        line-height: 32px;
+        padding-right: 44px;
+    }
+    ul li.last{
+        padding-right: 19px;
+    }
+    ul li a{
+        position: relative;
+        padding-right: 12px;
+        font-weight: bold;
+        color: $white;
+        background: url(../images/nav-item.png) no-repeat right 50%;
+    }
+    .dd{
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 30px;
+        left: 0;
+        width: 109px;
+        background: #3a8cc0;
+    }
+    .dd ul{
+        float: none;
+    }
+    .dd ul li{
+        float: left;
+        background: none;
+        padding: 0;
+        width: 109px;
+    }
+    .dd ul li a{
+        display: block;
+        padding: 0 0 0 15px;
+        line-height: 25px;
+        width: 95px;
+        background: none;
+    }
+}
      
-}
-    #navigation ul li a 
-{
-     color: #fff;
-     
-}
-    #navigation ul li a:hover 
-{
-     color: #005388;
-     text-decoration: none;
-     
-}
-    #sort-nav 
-{
-     display: inline;
-     position: absolute;
-     top: 73px;
-     left: 0;
-     height: 42px;
-     z-index: 50; 
-}
-    #sort-nav ul 
-{
-     display: inline;
-     float: left;
-     list-style: none;
-     height: 42px;
-     
-}
-    #sort-nav ul li 
-{
-     position: relative;
-     display: inline;
-     float: left;
-     line-height: 32px;
-     padding-right: 44px;
-     
-}
-    #sort-nav ul li.last 
-{
-     padding-right: 19px;
-     
-}
-    #sort-nav ul li a 
-{
-     position: relative;
-     padding-right: 12px;
-     font-weight: bold;
-     color: #fff;
-     background: url(../images/nav-item.png) no-repeat right 50%;
-      
-}
-    #sort-nav .dd 
-{
-     display: none;
-     position: absolute;
-     z-index: 100;
-     top: 30px;
-     left: 0;
-     width: 109px;
-     background: #3a8cc0;
-     
-}
-    #sort-nav .dd ul 
-{
-     float: none;
-     
-}
-    #sort-nav .dd ul li 
-{
-     float: left;
-     background: none;
-     padding: 0;
-     width: 109px;
-     
-}
-    #sort-nav .dd ul li a 
-{
-     display: block;
-     padding: 0 0 0 15px;
-     line-height: 25px;
-     width: 95px;
-     background: none;
-     
-}
-    #main 
-{
+#main{
      position: relative;
      z-index: 1
 }
-.slider-holder 
-{
+
+.slider-holder{
      position: relative;
      width: 887px;
      height: 410px;
      padding: 39px 33px 0 72px;
      background: url(../images/slider-frame.png) no-repeat 0 0;
-     
 }
-.promo 
-{
-     display: block;
-     float: left;
-     padding-top: 47px;
-     width: 234px;
-     height: 276px;
-     
+
+.promo{
+    display: block;
+    float: left;
+    padding-top: 47px;
+    width: 234px;
+    height: 276px;
 }
-    #slider 
-{
+
+#slider{
      display: inline;
      float: right;
      width: 627px;
-     
 }
+
 .jcarousel-container 
 {
      position: relative;
@@ -486,7 +427,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 {
      font-size: 50px;
      line-height: 52px;
-     color: #fff;
+     color: $white;
      padding-bottom: 0;
      
 }
@@ -665,7 +606,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 .product .price-box p span.price 
 {
-     color: #fff;
+     color: $white;
      font-size: 24px;
      
 }
@@ -814,7 +755,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 #newsletter .submit-button input{
     font-weight: bold;
-    color: #fff; 
+    color: $white; 
 }
     #newsletter .submit-button 
 {
@@ -848,7 +789,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 .post-short .date-box p 
 {
-     color: #fff;
+     color: $white;
      text-align: center;
      font-size: 16px;
      font-weight: bold;
