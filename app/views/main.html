@@ -1,20 +1,7 @@
 <!-- Header -->
 <div id="header">
-	<!-- Logo -->
-	<h1 id="logo"><a title="Home" href="#">accessories store</a></h1>
-	<p class="shopping-cart"><a class="cart" ng-click="viewShoppingCart()" title="Your Shopping Cart">{{ pageConfig.shoppingcart }}</a><span>Articles:</span>&nbsp;4<span>Cost:</span>&nbsp;$59.99</p>					
-	<!-- Search -->
-	<div class="search-expand"></div>
-	<div id="search">
-		<div class="retract-button">
-			<p>retract</p>
-		</div>
-		<form action="" method="post">
-			<input type="text" class="field" value="Search" title="Search" />
-			<input type="submit" value="" class="submit-button" />
-		</form>						
-	</div>
-	<!-- END Search -->
+	<cart-detail data=""></cart-detail>			
+	<search-box></search-box>
 	<div class="cl"></div>
 	<!-- Navigation -->
 	<div id="navigation">
