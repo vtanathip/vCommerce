@@ -42,6 +42,11 @@ angular.module('vCommerceApp', [
       url: '/shoppingcart',
       templateUrl: 'views/shoppingcart.html',
       controller: 'ShoppingCartCtrl'
+    }).
+    state('shoppingcart.checkout',{
+      url: '/shoppingcart/checkout',
+      templateUrl: 'views/checkout.html',
+      controller: 'CheckOutCtrl'
     });
     
   });
