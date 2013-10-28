@@ -1,0 +1,4 @@
+[
+    { email: "tanathip.se@gmail.com", password: "smarty", name: "tanathip viriya", phone: "0868185055", city: "bangkok", country: "thailand"},
+    { email: "admin@admin.com"      , password: "admin" , name: "admin admin"    , phone: "0869999999", city: "tokyu"  , country: "japan"}
+]
