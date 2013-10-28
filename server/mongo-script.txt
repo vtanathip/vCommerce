@@ -1,0 +1,2 @@
+mongoimport --db vCommerce --collection products  --type json --file products.json --jsonArray
+mongoimport --db vCommerce --collection user  	  --type json --file user.json     --jsonArray
