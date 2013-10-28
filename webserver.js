@@ -16,6 +16,8 @@ var db  = mongoose.connect('mongodb://localhost:27017/vCommerce',function(error)
 var api = require('./server/controllers/api.js');
 app.get('/products', api.listProduct);
 app.get('/user', api.listUser);
+app.get('/getFeatureProduct', api.getFeatureProduct);
+app.get('/getBestSellerProduct', api.getBestSellerProduct);
 
 app.listen( process.env.PORT || 5000 );
 

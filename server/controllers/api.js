@@ -14,6 +14,18 @@ exports.listUser = function(req, res) {
   });
 }
 
+exports.getFeatureProduct = function(req, res) {
+  products.find({ feature: true },function(err, products) {
+    res.send(products);
+  });
+}
+
+exports.getBestSellerProduct = function(req, res) {
+  products.find({ feature: false },function(err, products) {
+    res.send(products);
+  });
+}
+
 // list all data in database for testing only.
 // products.findOne({ name: 'XR-34' }, function(err, a) {
 //   if (err) return console.error(err);
