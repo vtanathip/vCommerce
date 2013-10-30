@@ -6,117 +6,19 @@
 			<h3>Feature Products</h3>									
 		</div>
 		<div class="cl"></div>	
-		<div class="product">																										
-			<a title="Details" href="#"><img src="../images/paperclip.jpg" alt="paperclip" /></a>
+		<div class="product" ng-repeat="product in data">	
+			<a title="Details" href="#"><img src="{{product.images}}" alt="{{product.imagestitle}}" /></a>
 			<div class="desc">
 				<p class="name">Product Name</p>
-				<p>Model: <span>XR-34</span></p>
+				<p>Model: <span>{{product.name}}</span></p>
 				<p>Peaces in Box: <span>12</span></p>
-				<p>Product code: <span>1215</span></p>
+				<p>Product code: <span>{{product.code}}</span></p>
 			</div>	
 			<div class="price-box">
-				<p>$<span class="price"> 01<sup>.69</sup></span></p>
+				<p>$<span class="price"> {{product.price}}</span></p>
 				<p class="per-peace">Per Peace</p>
 			</div>
-			<div class="cl"></div>																														
-		</div>
-		<div class="product">																										
-			<a title="Details" href="#"><img src="../images/pen.jpg" alt="pen" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>PgK</span></p>
-				<p>Peaces in Box: <span>100</span></p>
-				<p>Product code: <span>3275</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 00<sup>.99</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																											
-		</div>
-		<div class="product">																												
-			<a title="Details" href="#"><img src="../images/markers.jpg" alt="markers" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>XZ-8</span></p>
-				<p>Peaces in Box: <span>48</span></p>
-				<p>Product code: <span>1456</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 01<sup>.69</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																															
-		</div>
-		<div class="product">																												
-			<a title="Details" href="#"><img src="../images/eraser.jpg" alt="eraser" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>small</span></p>
-				<p>Peaces in Box: <span>20</span></p>
-				<p>Product code: <span>3256</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 00<sup>.29</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																														
-		</div>
-		<div class="product">																											
-			<a title="Details" href="#"><img src="../images/marker.jpg" alt="marker" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>BX</span></p>
-				<p>Peaces in Box: <span>12</span></p>
-				<p>Product code: <span>1003</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 01<sup>.25</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																														
-		</div>
-		<div class="product">																											
-			<a title="Details" href="#"><img src="../images/sharpener.jpg" alt="sharpener" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>XZ-4</span></p>
-				<p>Peaces in Box: <span>48</span></p>
-				<p>Product code: <span>1457</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 04<sup>.99</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																															
-		</div>										
-		<div class="product">																												
-			<a title="Details" href="#"><img src="../images/pens.jpg" alt="pens" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>gJ</span></p>
-				<p>Peaces in Box: <span>100</span></p>
-				<p>Product code: <span>3269</span></p>
-			</div>	
-			<div title="Details" class="price-box">
-				<p>$<span class="price"> 01<sup>.25</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																															
-		</div>
-		<div class="product">																												
-			<a title="Details" href="#"><img src="../images/perforator.jpg" alt="perforator" /></a>
-			<div class="desc">
-				<p class="name">Product Name</p>
-				<p>Model: <span>XR-34</span></p>
-				<p>Peaces in Box: <span>12</span></p>
-				<p>Product code: <span>1215</span></p>
-			</div>	
-			<div class="price-box">
-				<p>$<span class="price"> 00<sup>.59</sup></span></p>
-				<p class="per-peace">Per Peace</p>
-			</div>
-			<div class="cl"></div>																									
+			<div class="cl"></div>					
 		</div>
 		<div class="cl"></div>
 	</div>
