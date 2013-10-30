@@ -4,7 +4,9 @@ var winston  = require('winston');
 var mongoose = require('mongoose');
 
 var app = express();
-var db  = mongoose.connect('mongodb://localhost:27017/vCommerce',function(error){
+
+var db_url =  process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost:27017/vCommerce';
+var db  = mongoose.connect(db_url,function(error){
 	if (error) { 
 		winston.info('Web Server having problem when create connection to database.');
 		throw error; 
@@ -26,3 +28,4 @@ winston.info('Web Server is bootstrap ...');
 app.get('/', function(request, response) {
    response.send({text:"Hello World."});
 });
+
