@@ -1,15 +1,11 @@
 'use strict';
 
 angular.module('vCommerceApp')
-	.controller 'MainCtrl' , ($scope,$state,pageConfig) ->
+	.controller 'MainCtrl' , ($scope,$state,pageConfig,featureProduct) ->
 		$scope.pageConfig = pageConfig
-		$scope.awesomeThings = [
-	      'HTML5 Boilerplate'
-	      'AngularJS'
-	      'Karma'
-	    ];
+		$scope.featureProduct = featureProduct
 
-	    $scope.navigateToMenu = (state)->
+		$scope.navigateToMenu = (state)->
 	    	$state.go state
 	    	return
 

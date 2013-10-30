@@ -14,6 +14,9 @@ angular.module('vCommerceApp', [
     var MainCtrlResolver = {
         pageConfig : function(pageInfo) {
            return pageInfo.getPageInfo('main');
+        },
+        featureProduct : function(product){
+          return product.getFeatureProduct();
         }
     };
 
