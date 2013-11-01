@@ -282,7 +282,7 @@ span.label-right{
      
 #main{
      position: relative;
-     z-index: 1
+     z-index: 1;
 }
 
 .slider-holder{
@@ -846,6 +846,166 @@ span.label-right{
      padding-right: 30px;
      
 }
+/* DEV */
+.object-wrapper{
+    position: relative;
+    z-index: 1;
+    min-height: 750px;
+}
+.object{
+    position:relative;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    width: 981px;
+    background: url(../images/products-holder.png) no-repeat 0 bottom;
+    
+    h3{
+        min-width: 134px;
+    }
+
+    .top{
+        height: 8px;
+        line-height: 0;
+        font-size: 0;
+        background: url(../images/products-top.png) no-repeat 0 0; 
+    }
+
+    .middle{
+        padding: 12px 5px 10px 20px;
+        background: url(../images/products-middle.png) repeat-y center 0;
+    }
+
+    .bottom{
+        height: 7px;
+        line-height: 0;
+        font-size: 0;
+        background: url(../images/products-bottom.png) no-repeat 0 bottom;
+     }
+
+    .email-wrapper{
+        width: 650px;
+        margin: 10px auto 0px auto;
+        padding: 20px;
+        text-align: center;
+
+        .field-holder{
+            margin: 0 auto;
+
+            input{
+                text-align: center; 
+            }
+        }
+
+        .wrapperbutton{
+            width:500px;
+        }
+     }
+
+     .product-detail{
+        width: 650px;
+        height: 160px;
+        float: left;
+        margin-top: 10px;
+        border: 1px dotted;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+
+        h3{
+            font-size:16px;
+            margin-bottom:10px;
+            font-weight: bold;
+            color: #056daf;
+        }
+
+        span{
+            font-size: 15px;
+        }
+
+     }
+
+    .product-button{
+        width: 691px;
+        height: 75px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .shoppingcart{
+        margin-top:30px;
+        margin-bottom:30px;
+
+        table{
+            border-spacing: 0;
+            text-align:center;
+            border:1px dotted;  
+            thead{
+                tr{
+                    background:#e9e9e9;
+                    height:50px;
+                }
+            }
+            tbody{
+                background:#fff;
+                tr{
+                    height:50px;
+                    td{
+                        padding:20px;
+                        div{
+                            width:150px;
+                            height:180px;
+                            margin:0 auto;
+                        }
+                        input{
+                            width:35px;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+            tfoot{
+                tr{
+                    background:#e9e9e9;
+                    height:50px;
+                    td:first-child{
+                        float:left;
+                        margin-left:30px;
+                        margin-top:17px;
+                    }
+                    td:last-child{
+                        div{
+                            float:right;
+                            margin-right:30px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .signin{
+        width: 650px;
+        margin: 10px auto 0px auto;
+        padding: 20px;
+        .signin-form{
+            width:300px;
+            margin:0 auto;
+            p{
+                font-size:14px;
+                font-weight:bold;
+                margin-bottom:5px;
+            }
+            .wrapperbutton{
+                width:165px;
+                margin: 20px auto 10px auto;
+            }
+        }
+    }
+
+}
+
+/* END DEV */
 
 /* Tools */
 .floatLeft{
