@@ -7,7 +7,7 @@
 		</div>
 		<div class="cl"></div>	
 		<div class="product" ng-repeat="product in data">	
-			<a title="Details" href="#"><img src="{{product.images}}" alt="{{product.imagestitle}}" /></a>
+			<a title="Details" href="#"><img ng-src="{{product.images}}" alt="{{product.imagestitle}}" /></a>
 			<div class="desc">
 				<p class="name">Product Name</p>
 				<p>Model: <span>{{product.name}}</span></p>
