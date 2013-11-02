@@ -198,7 +198,7 @@ span.label-right{
         font-size: 18px;
         color: $white;
         font-weight: normal;
-        line-height: 30px;
+        line-height: 10px;
     }
 }
 
@@ -226,7 +226,7 @@ span.label-right{
 #sort-nav{
     display: inline;
     position: absolute;
-    top: 73px;
+    top: 100px;
     left: 0;
     height: 42px;
     z-index: 50;
@@ -560,6 +560,10 @@ span.label-right{
      padding-left: 20px;
      width: 111px;
      
+}
+.product .desc p
+{
+    margin: 0;
 }
 .product .desc p span 
 {
@@ -1060,5 +1064,49 @@ span.label-right{
     width: 250px;
     margin: 50px auto 0px auto;
     height: auto;
+}
+.modal{
+    background: none;
+    border: 0;
+    border-radius: 0;
+    width: 582px;
+    box-shadow: 0 0 #fff;
+}
+.modal.fade.in{
+    top: 20% !important;
+}
+.shadowInBox {
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
+}
+.modalContent {
+  padding: 40px 0 10px 0;
+  width: 580px;
+  p {
+    color: #6f6f6f;
+    font-size: 30px;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .title{
+    color: #000;
+    font-size: 32px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+}
+.boxWhite {
+    margin: 0 0 10px;
+    background: #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #bebdbd;
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 8px rgba(195, 195, 195, 0.7);
 }
 /* END Tools*/
