@@ -26,7 +26,7 @@ describe 'Services: Product', () ->
   
   it 'should call through getAllProducts service' , () ->
 
-    httpBackendMock.when('GET', 'http://localhost:5000/products').respond(200,'')
+    httpBackendMock.when('GET', 'http://localhost:5000/get/products').respond(200,'')
     
     spyOn(productMock,'getAllProducts').andCallThrough()
     
@@ -38,7 +38,7 @@ describe 'Services: Product', () ->
 
   it 'should call through getFeatureProduct service' , () ->
 
-    httpBackendMock.when('GET', 'http://localhost:5000/getFeatureProduct').respond(200,'')
+    httpBackendMock.when('GET', 'http://localhost:5000/get/featureProduct').respond(200,'')
     
     spyOn(productMock,'getFeatureProduct').andCallThrough()
     
@@ -50,7 +50,7 @@ describe 'Services: Product', () ->
 
   it 'should call through getBestSellerProduct service' , () ->
 
-    httpBackendMock.when('GET', 'http://localhost:5000/getBestSellerProduct').respond(200,'')
+    httpBackendMock.when('GET', 'http://localhost:5000/get/bestSellerProduct').respond(200,'')
     
     spyOn(productMock,'getBestSellerProduct').andCallThrough()
     
