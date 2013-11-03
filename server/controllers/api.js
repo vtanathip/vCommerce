@@ -26,18 +26,26 @@ exports.getBestSellerProduct = function(req, res) {
   });
 }
 
-// list all data in database for testing only.
-// products.findOne({ name: 'XR-34' }, function(err, a) {
-//   if (err) return console.error(err);
-//   console.log('result: ' + a);
-// });
+exports.saveUser = function(req, res) {
 
-// products.find(function(err, a) {
-//   if (err) return console.error(err);
-//   console.dir(a);
-// });
+  var body = req.body;
+  var userModel = new user({
+    email     : body.email,
+    password  : body.password,
+    name      : body.name,
+    phone     : body.phone,
+    city      : body.city,
+    country   : body.country
+  });
 
-// user.find(function(err, a) {
-//   if (err) return console.error(err);
-//   console.dir(a);
-// });
+  userModel.save(function(err,userModel,numberAffected){
+    if(err === null){
+      res.status(200);
+      return res.send(true);
+    }else{
+      res.status(500);
+      return res.send(false);
+    }
+  });
+
+}
