@@ -13,4 +13,7 @@ angular.module('vCommerceApp')
 			,getAllProducts : () ->
 				return $http.get(server + 'products').then (response)->
 					return response.data
+			,saveUser : (data) ->
+				return $http.post(server + 'save/user' , JSON.stringify(data)).then (response)->
+					return response.data
 		}
