@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('vCommerceApp')
-	.controller 'SignUpCtrl', ($scope,modalLoading,product) ->
+	.controller 'SignUpCtrl', ($scope,modalLoading,user) ->
 
 		$scope.saveUser = (data)->
 
@@ -10,7 +10,7 @@ angular.module('vCommerceApp')
 	            description : 'description'
 	        })
 	        
-	        product.saveUser(data).then((response)->
+	        user.saveUser(data).then((response)->
 	        		modalLoading.dismiss()
 	        		return)
 
