@@ -18,6 +18,8 @@ module.exports = function(config) {
       'app/bower_components/angular-localstorage/angular-local-storage.js',
       'app/bower_components/angular-cookies/angular-cookies.min.js',
       'app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap.min.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
