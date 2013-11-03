@@ -27,14 +27,14 @@
 					<div class="signin-form">
 						<p><label for="email">Email: </label></p> 
 						<div class="field-holder">
-							<input id="email" class="field" name="email" placeholder="your email?" required="" type="email"> 
+							<input id="email" class="field" name="email" placeholder="your email?" required="" type="email" ng-model="user.email"> 
 						</div>
 						<p><label for="password">Password: </label></p>
 						<div class="field-holder">
 							<input type="password" class="field" id="password" placeholder="your password?"  name="password" required="">
 						</div> 
 						<div class="wrapperbutton">
-							<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="login" type="button">
+							<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="login" type="button" ng-click="getUser(user)">
 							<input class="cancelbutton" name="cancel" id="cancel" tabindex="5" value="Nope" type="button">
 						</div>
 					</div>
