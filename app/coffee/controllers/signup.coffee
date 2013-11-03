@@ -1,7 +1,9 @@
 'use strict'
 
 angular.module('vCommerceApp')
-	.controller 'SignUpCtrl', ($scope,modalLoading,user) ->
+	.controller 'SignUpCtrl', ($scope,modalLoading,user,pageConfig) ->
+
+		$scope.pageConfig = pageConfig
 
 		$scope.saveUser = (data)->
 

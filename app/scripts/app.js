@@ -21,6 +21,42 @@ angular.module('vCommerceApp', [
         }
     };
 
+    var SignUpCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('signup');
+        }
+    };
+
+    var SignInCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('signin');
+        }
+    };
+
+    var CatalogCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('catalog');
+        }
+    };
+
+    var ProductCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('product');
+        }
+    };
+
+    var ShopppingCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('shopping');
+        }
+    };
+
+    var CheckOutCtrlResolver = {
+        pageConfig : function(pageInfo) {
+           return pageInfo.getPageInfo('checkout');
+        }
+    };
+
     $stateProvider.state('main', {
         url: "/",
         templateUrl : 'views/main.html',
@@ -30,32 +66,38 @@ angular.module('vCommerceApp', [
     state('signup',{
         url: "/signup",
         templateUrl : 'views/signup.html',
-        controller  : 'SignUpCtrl'
+        controller  : 'SignUpCtrl',
+        resolve     : SignUpCtrlResolver
     }).
     state('signin',{
-      url: '/signin',
-      templateUrl: 'views/signin.html',
-      controller: 'SignInCtrl'
+        url: '/signin',
+        templateUrl: 'views/signin.html',
+        controller: 'SignInCtrl',
+        resolve     : SignInCtrlResolver
     }).
     state('catalog',{
-      url: "/catalog",
-      templateUrl : 'views/catalog.html',
-      controller  : 'CatalogCtrl'
+        url: "/catalog",
+        templateUrl : 'views/catalog.html',
+        controller  : 'CatalogCtrl',
+        resolve     : CatalogCtrlResolver
     }).
     state('product',{
-      url: "/product",
-      templateUrl : 'views/product.html',
-      controller  : 'ProductCtrl'
+        url: "/product",
+        templateUrl : 'views/product.html',
+        controller  : 'ProductCtrl',
+        resolve     : ProductCtrlResolver
     }).
     state('shoppingcart',{
-      url: '/shoppingcart',
-      templateUrl: 'views/shoppingcart.html',
-      controller: 'ShoppingCartCtrl'
+        url: '/shoppingcart',
+        templateUrl: 'views/shoppingcart.html',
+        controller: 'ShoppingCartCtrl',
+        resolve     : ShopppingCtrlResolver
     }).
     state('checkout',{
-      url: '/checkout',
-      templateUrl: 'views/checkout.html',
-      controller: 'CheckOutCtrl'
+        url: '/checkout',
+        templateUrl: 'views/checkout.html',
+        controller: 'CheckOutCtrl',
+        resolve     : CheckOutCtrlResolver
     });
     
   });
