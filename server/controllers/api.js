@@ -49,3 +49,19 @@ exports.saveUser = function(req, res) {
   });
 
 }
+
+exports.getUser = function(req, res) {
+
+  var name = req.body;
+
+  user.find(name,function(err,userModel){
+    if(err === null){
+      res.status(200);
+      return res.send(userModel);
+    }else{
+      res.status(500);
+      return res.send(false);
+    }
+  });
+
+}

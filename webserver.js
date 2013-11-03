@@ -18,11 +18,12 @@ var db  = mongoose.connect(db_url,function(error){
 });
 
 var api = require('./server/controllers/api.js');
-app.get('/products', api.listProduct);
-app.get('/user', api.listUser);
-app.get('/getFeatureProduct', api.getFeatureProduct);
-app.get('/getBestSellerProduct', api.getBestSellerProduct);
+app.get('/get/products', api.listProduct);
+app.get('/get/user', api.listUser);
+app.get('/get/featureProduct', api.getFeatureProduct);
+app.get('/get/bestSellerProduct', api.getBestSellerProduct);
 app.post('/save/user',api.saveUser);
+app.post('/find/user',api.getUser);
 
 app.listen( process.env.PORT || 5000 );
 
