@@ -5,7 +5,7 @@ angular.module('vCommerceApp')
 		directiveDefinitionObject =
 			restrict: 'E',
 			scope: 
-				data: '=',
+				meta: '=',
 			templateUrl: 'templates/cartdetail.html',
 			replace: false,
 			controller: ($scope,$state) ->
