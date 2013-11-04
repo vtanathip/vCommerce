@@ -18,7 +18,8 @@ var db  = mongoose.connect(db_url,function(error){
 });
 
 var api = require('./server/controllers/api.js');
-app.get('/get/products', api.listProduct);
+app.get('/get/all/products', api.listProduct);
+app.post('/get/products', api.getProduct);
 app.get('/get/user', api.listUser);
 app.get('/get/featureProduct', api.getFeatureProduct);
 app.get('/get/bestSellerProduct', api.getBestSellerProduct);

@@ -8,6 +8,22 @@ exports.listProduct = function(req, res) {
   });
 }
 
+exports.getProduct = function(req, res) {
+
+  var name = req.body;
+  
+  products.find(name,function(err,productModel){
+    if(err === null){
+      res.status(200);
+      return res.send(productModel);
+    }else{
+      res.status(500);
+      return res.send(false);
+    }
+  });
+
+}
+
 exports.listUser = function(req, res) {
   user.find(function(err, user) {
     res.send(user);
