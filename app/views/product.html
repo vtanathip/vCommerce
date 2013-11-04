@@ -22,19 +22,19 @@
 			<h3>Product Detail</h3>									
 		</div>
 		<div class="cl"></div>	
-		<div class="product">																										
-			<a title="Details" ><img src="../images/paperclip.jpg" alt="paperclip" /></a>
+		<div class="product" >	
+			<a title="Details" href="#"><img ng-src="{{product.images}}" alt="{{product.imagestitle}}" /></a>
 			<div class="desc">
 				<p class="name">Product Name</p>
-				<p>Model: <span>XR-34</span></p>
+				<p>Model: <span>{{product.name}}</span></p>
 				<p>Peaces in Box: <span>12</span></p>
-				<p>Product code: <span>1215</span></p>
+				<p>Product code: <span>{{product.code}}</span></p>
 			</div>	
 			<div class="price-box">
-				<p>$<span class="price"> 01<sup>.69</sup></span></p>
+				<p>$<span class="price"> {{product.price}}</span></p>
 				<p class="per-peace">Per Peace</p>
 			</div>
-			<div class="cl"></div>																														
+			<div class="cl"></div>					
 		</div>
 		<div class="product-detail">
 			<h3>Product Detail</h3>

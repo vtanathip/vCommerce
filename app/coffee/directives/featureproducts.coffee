@@ -11,7 +11,7 @@ angular.module('vCommerceApp')
 	        controller: ($scope,$state) ->
 
 	        	$scope.goToProductDetail = (productName)->
-	        		$state.go "product", { product : productName}
+	        		$state.go "product", { name : productName }
 	        		return
 
 	        	return

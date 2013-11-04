@@ -82,7 +82,7 @@ angular.module('vCommerceApp', [
         resolve     : CatalogCtrlResolver
     }).
     state('product',{
-        url: "/product",
+        url: "/product/:name",
         templateUrl : 'views/product.html',
         controller  : 'ProductCtrl',
         resolve     : ProductCtrlResolver

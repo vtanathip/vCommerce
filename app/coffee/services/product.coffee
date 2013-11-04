@@ -11,6 +11,12 @@ angular.module('vCommerceApp')
 				return $http.get(server + '/get/bestSellerProduct').then (response)->
 					return response.data
 			,getAllProducts : () ->
-				return $http.get(server + '/get/products').then (response)->
+				return $http.get(server + '/get/all/products').then (response)->
 					return response.data
+			,getProduct : (object) ->
+				data = {
+					name : object.name
+				}
+				return $http.post(server + '/get/products', JSON.stringify(data)).then (response)->
+					return response.data[0]
 		}
