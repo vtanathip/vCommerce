@@ -7,6 +7,13 @@ angular.module('vCommerceApp')
 			scope : 
 	            data      : '=',
 	        templateUrl : 'templates/featureproducts.html',
-	        replace: false
+	        replace: false,
+	        controller: ($scope,$state) ->
+
+	        	$scope.goToProductDetail = (productName)->
+	        		$state.go "product", { product : productName}
+	        		return
+
+	        	return
 
 		return directiveDefinitionObject
