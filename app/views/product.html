@@ -42,9 +42,10 @@
 		</div>
 		<div class="product-button">
 			<div class="wrapperbutton">
-				<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="Add to cart" type="button">
+				<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="Add to cart" type="button" ng-click="addToCart()">
 				<input class="cancelbutton" name="cancel" id="cancel" tabindex="5" value="Nope" type="button">
 			</div>
+			<toaster-container  toaster-options="{'position-class': 'toast-bottom-left','time-out': 2000,hideDuration: 500 }" > </toaster-container>
 		</div>
 		<div class="cl"></div>
 	</div>
