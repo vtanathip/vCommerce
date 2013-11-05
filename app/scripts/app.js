@@ -6,7 +6,9 @@ angular.module('vCommerceApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'toaster',
+  'ngAnimate'
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
     
