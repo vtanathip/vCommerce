@@ -34,16 +34,16 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr ng-repeat="item in itemslist">
 						<td>
 							<div>
-								<img src="../images/paperclip.jpg" alt="paperclip" />
-								<p>Model: <span>XR-34</span></p>
+								<img ng-src="{{item.images}}" alt="{{item.imagestitle}}" />
+								<p>Model: <span>{{item.name}}</span></p>
 							</div>
 						</td>
-						<td>3</td>
-						<td><input type="text" value="2"></input></td>
-						<td>6.00</td>
+						<td>1</td>
+						<td><input type="text" value="1"></input></td>
+						<td>{{item.price}}</td>
 					</tr>
 				</tbody>
 				<tfoot>
