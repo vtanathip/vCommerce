@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('vCommerceApp')
-	.controller 'ProductCtrl' , ($scope,pageConfig,product,$stateParams,toaster) ->
+	.controller 'ProductCtrl' , ($scope,pageConfig,product,$stateParams,toaster,localStorageService) ->
 		$scope.pageConfig = pageConfig
 
 		product.getProduct($stateParams).then(
@@ -12,6 +12,14 @@ angular.module('vCommerceApp')
 
 		$scope.addToCart = () ->
 			toaster.pop('warning', "Added", $scope.product.name + " to shopping cart.")
-			return
-
+			value  = localStorageService.get('shoppingcart')
+			if value
+				value.push $scope.product
+				localStorageService.add 'shoppingcart' , value
+				return
+			else
+				myShoppingCart = new Array()
+				myShoppingCart.push $scope.product
+				localStorageService.add 'shoppingcart' , myShoppingCart
+				return
 		return
