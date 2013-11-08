@@ -28,8 +28,9 @@
 				<input type="text" class="field" placeholder="Email for Statement" title="Email" />
 			</div>
 			<div class="wrapperbutton">
-				<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="Send me the statement" type="button">
-				<input class="cancelbutton" name="cancel" id="cancel" tabindex="5" value="I'm change my mind" type="button">
+				<input class="confirmbutton" name="submit" id="submit" tabindex="5" value="Send me the statement" type="button" ng-click="sendStatement()">
+				<input class="cancelbutton" name="cancel" id="cancel" tabindex="5" value="I'm change my mind" type="button" ng-click="backToMain()">
+				<toaster-container  toaster-options="{'position-class': 'toast-bottom-left','time-out': 3000,hideDuration: 500 }" > </toaster-container>
 			</div>
 		
 		</div>
