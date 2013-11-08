@@ -3,7 +3,7 @@
 angular.module('vCommerceApp')
 	.controller 'ShoppingCartCtrl', ($scope,$state,pageConfig,localStorageService)->
 		$scope.pageConfig = pageConfig
-		
+		$scope.quantitydata = 1
 
 		value  = localStorageService.get('shoppingcart')
 		if value
@@ -12,6 +12,9 @@ angular.module('vCommerceApp')
 			$scope.itemslist = {}
 
 		$scope.proceedToCheckOut = () ->
+			localStorageService.add 'result' , value
+			localStorageService.add 'shoppingcart' , undefined
+			localStorageService.add 'productName' , undefined
 			$state.go 'checkout'
 			return
 
