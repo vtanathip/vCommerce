@@ -13,8 +13,6 @@ angular.module('vCommerceApp')
 
 		$scope.proceedToCheckOut = () ->
 			localStorageService.add 'result' , value
-			localStorageService.add 'shoppingcart' , undefined
-			localStorageService.add 'productName' , undefined
 			$state.go 'checkout'
 			return
 

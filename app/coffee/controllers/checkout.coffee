@@ -7,8 +7,9 @@ angular.module('vCommerceApp')
 		$scope.sendStatement = () ->
 			toaster.pop('success', "Sended", "Wait for email statement.")
 			result  = localStorageService.get('result')
-			result  = undefined
-			localStorageService.add 'result', result
+			localStorageService.add 'shoppingcart' , undefined
+			localStorageService.add 'productName' , undefined
+			localStorageService.add 'result', undefined
 			return
 
 		$scope.backToMain = () ->
