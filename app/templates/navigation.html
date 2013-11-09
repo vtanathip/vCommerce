@@ -1,7 +1,9 @@
 <ul>
-	<li><a title="Home" href="#">Home</a></li>
+	<li ng-show="checkSignIn()"><a title="Name" href="#">Hello, {{user[0].name}}</a></li>
+	<li ng-show="!checkSignIn()"><a title="Home" href="#">Home</a></li>
 	<!-- <li><a title="Sales" ng-click="changeLanguage()">Switch Lang</a></li> -->
-	<li><a title="Catalog" ng-click="navigateToMenu('catalog')">Catalog</a></li>
-	<li><a title="Sign In" ng-click="navigateToMenu('signin')">Sign in</a></li>
 	<li><a title="Sign Up" ng-click="navigateToMenu('signup')">Sign up</a></li>
+	<li><a title="Catalog" ng-click="navigateToMenu('catalog')">Catalog</a></li>
+	<li ng-show="!checkSignIn()"><a title="Sign In" ng-click="navigateToMenu('signin')">Sign in</a></li>
+	<li ng-show="checkSignIn()"><a title="Sign Out" ng-click="signOut()">Sign Out</a></li>
 </ul>

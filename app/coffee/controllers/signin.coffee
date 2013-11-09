@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('vCommerceApp')
-	.controller 'SignInCtrl', ($scope,$state,pageConfig,modalLoading,user) ->
+	.controller 'SignInCtrl', ($scope,$state,pageConfig,modalLoading,user,localStorageService) ->
 		
 		$scope.pageConfig = pageConfig
 
@@ -14,6 +14,7 @@ angular.module('vCommerceApp')
 	        
 	        user.getUser(data).then((response)->
 	        		modalLoading.dismiss()
+	        		localStorageService.add 'user',response
 	        		$state.go 'main'
 	        		return)
 
