@@ -20,6 +20,8 @@ module.exports = function(config) {
       'app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap.min.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+      'app/bower_components/AngularJS-Toaster/toaster.js',
+      'app/bower_components/angular-animate/angular-animate.min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
