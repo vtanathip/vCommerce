@@ -2,13 +2,18 @@
 
 describe 'Services: Product', () ->
   
-  httpBackendMock = productMock = null
+  httpBackendMock = productMock = data = null
 
   beforeEach module 'vCommerceApp'
 
   beforeEach inject ($httpBackend, $injector) ->
     productMock = $injector.get('product')
     httpBackendMock = $httpBackend
+
+    data = {
+          name : 'testName'
+        }
+
     return
 
   afterEach () ->
@@ -24,9 +29,21 @@ describe 'Services: Product', () ->
     expect(typeof productMock).toBe 'object'
     return
   
+  it 'should call through getProducts service' , () ->
+
+    httpBackendMock.when('POST', 'http://localhost:5000/get/products').respond(200,'')
+    
+    spyOn(productMock,'getProduct').andCallThrough()
+    
+    productMock.getProduct(data)
+    
+    httpBackendMock.flush()
+
+    return
+
   it 'should call through getAllProducts service' , () ->
 
-    httpBackendMock.when('GET', 'http://localhost:5000/get/products').respond(200,'')
+    httpBackendMock.when('GET', 'http://localhost:5000/get/all/products').respond(200,'')
     
     spyOn(productMock,'getAllProducts').andCallThrough()
     
@@ -34,7 +51,7 @@ describe 'Services: Product', () ->
     
     httpBackendMock.flush()
 
-    return
+    return    
 
   it 'should call through getFeatureProduct service' , () ->
 
