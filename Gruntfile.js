@@ -150,7 +150,11 @@ module.exports = function (grunt) {
         httpFontsPath: '/styles/fonts',
         relativeAssets: false
       },
-      dist: {},
+      dist: { 
+        options: {
+          debugInfo: false
+        }
+      },
       server: {
         options: {
           debugInfo: true
@@ -236,7 +240,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
+          src : [ '*.html', 'views/**/*.html' ],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -253,8 +257,14 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
+            'images/{,*/}*.{gif,webp,jpg,png}',
+            'configuration/**/*',
+            'styles/fonts/*', 
+            'styles/**/*', 
+            'styles/*', 
+            'views/{,**/}*',
+            'templates/{,**/}*',
+            'index.html'
           ]
         }, {
           expand: true,
@@ -284,12 +294,12 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
-        'coffee',
+        'coffee:dist',
         'compass:dist',
-        'copy:styles',
-        'imagemin',
-        'svgmin',
-        'htmlmin'
+        'copy:styles'
+        // 'imagemin',
+        // 'svgmin',
+        // 'htmlmin'
       ]
     },
     karma: {
@@ -354,15 +364,15 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
-    'concurrent:dist',
+    'concurrent:server',
     'autoprefixer',
     'concat',
     'copy:dist',
-    'cdnify',
-    'ngmin',
+    // 'cdnify',
+    // 'ngmin',
     'cssmin',
-    'uglify',
-    'rev',
+    // 'uglify',
+    // 'rev',
     'usemin'
   ]);
 
