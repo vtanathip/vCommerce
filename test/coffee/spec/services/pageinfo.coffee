@@ -34,7 +34,7 @@ describe 'Services: Page Info', () ->
     httpBackendMock.when('GET', 'configuration/pages/en/main.json').respond(200,pageInfoResponse)
     
     pageInfoMock.getPageInfo('main').then (response) ->
-      expect(response.shoppingcart).toBe('Your Shopping Carts')
+      expect(response.shoppingcart).toBe('Your Shopping Cart')
       return
 
     httpBackendMock.flush()
